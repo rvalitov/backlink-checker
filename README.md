@@ -17,27 +17,60 @@ To start using the script, first have the list of donor web pages prepared in a 
 Script is used to check if a specified *LINK* exists in a list of web pages specified in a *FILE*, one URL per line. The script is useful for SEO experts when you need to validate that your backlinks still exist on the web pages where you set them or bought them.
 
 #### OPTIONS
-* **-v** 
+**-v**
+
 Activates verbose mode
-* **-mode** *LETTER*
+
+---
+
+**-mode** *LETTER*
+
 The *LETTER* defines how *LINK* is interpreted. We use [grep](https://en.wikipedia.org/wiki/Grep) for search, for complete info refer to Matcher Selection of the [grep manual](https://www.gnu.org/software/grep/manual/grep.html#grep-Programs). Usually grep supports the following modes:
-	* **-E**
+
+**-E**
+
 Interpret *LINK* as an extended regular expression (ERE).
-    * **-F**
+
+**-F**
+
 Interpret *LINK* as a fixed string (instead of regular expression). This is the default.
-	* **-G**
+
+**-G**
+
 Interpret *LINK* as a basic regular expression (BRE).
-	* **-P**
+
+**-P**
 Interpret *LINK* as a Perl-compatible regular expression (PCRE).
-* **-log** *LOG*
+
+
+---
+
+**-log** *LOG*
+
 Saves the log to file *LOG*.
-* **-found-log** *LOG*
+
+---
+
+**-found-log** *LOG*
+
 Saves URLs where the *LINK* was found to file *LOG*.
-* **-missing-log** *LOG*
+
+---
+
+**-missing-log** *LOG*
+
 Saves URLs where the *LINK* was not found to file *LOG*.
-* **-append**
+
+---
+
+**-append**
+
 All log files will be appended, otherwise they will be overwritten.
-* **-user-agent** *AGENT*
+
+---
+
+**-user-agent** *AGENT*
+
 Sets [user-agent string](https://en.wikipedia.org/wiki/User_agent) to *AGENT*.
 
 # Demo
