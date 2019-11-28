@@ -19,8 +19,8 @@ WEB_RETRIES="3"
 
 #SCRIPT VARS
 CURRENT_DIR=`dirname $0`
-E_WGET=`which wget`
-E_GREP=`which grep`
+E_WGET=`type -P wget`
+E_GREP=`type -P grep`
 SUCCESS_COUNT=0
 FAIL_COUNT=0
 LOG_COUNT=0
