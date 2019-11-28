@@ -17,3 +17,9 @@ Thumbs.db
 
 # text files
 *.txt
+
+#PhpStorm
+.idea/
+
+#Visual Studio
+.vs/
