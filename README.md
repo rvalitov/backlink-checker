@@ -77,14 +77,9 @@ Sets [user-agent string](https://en.wikipedia.org/wiki/User_agent) to *AGENT*.
 ![MapEx widget logo](https://thumbs.gfycat.com/VainFirstDugong-size_restricted.gif)
 
 # System Requirements
-The script should work on any Linux which has [wget](https://en.wikipedia.org/wiki/Wget) and [grep](https://en.wikipedia.org/wiki/Grep) installed. Or simply install them:
+The script should work on any Linux which has [wget](https://en.wikipedia.org/wiki/Wget) and [grep](https://en.wikipedia.org/wiki/Grep) installed. 
 
-```console
-apt-get update
-apt-get install wget grep
-```
-
-If you want to run this script in Windows, then you need to setup a bash shell first. I recommend to install [Git for Windows](https://git-scm.com/download/win), it has the bash shell and all required executables installed. After installation, simply run the `Git Bash` console.
+If you want to run this script in Windows, then you need to setup a bash shell first, for example, read instructions [here](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/). I personally didn't try to do that, so it's just a tip.  
 
 # Feedback
 Your feedback is very appreciated. If you want to see new features in this project, please, post your ideas and feature requests in the [issue tracker](https://github.com/rvalitov/backlink-checker/issues).
