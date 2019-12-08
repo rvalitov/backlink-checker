@@ -74,11 +74,75 @@ All log files will be appended, otherwise they will be overwritten.
 Sets [user-agent string](https://en.wikipedia.org/wiki/User_agent) to *AGENT*.
 
 # Demo
+
+```console
+root@Sputnik:~# bash backlink-checker.sh -input list.txt -link dubaidance.com -log log.txt -found-log found.txt -missing-log missing.txt
+```
+
 ![MapEx widget logo](https://thumbs.gfycat.com/VainFirstDugong-size_restricted.gif)
 
 # System Requirements
-The script should work on any Linux which has [wget](https://en.wikipedia.org/wiki/Wget) and [grep](https://en.wikipedia.org/wiki/Grep) installed. 
+## Linux
+The script should work on any Linux which has [wget](https://en.wikipedia.org/wiki/Wget) and [grep](https://en.wikipedia.org/wiki/Grep) installed. For Debian-based OS simply run the following command to install missing packages:
 
+```console
+apt-get update
+apt-get install wget grep
+```
+
+## iOS
+First, install brew, run in terminal:
+
+```console
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+Install wget:
+
+```console
+brew install wget
+```
+
+Install grep (we need a newer version of grep, the one that comes with iOS does not work properly):
+
+```console
+brew install grep
+```
+
+We need to add the bew binarties path to the `PATH` variable, so that we use the new binaries from brew. You can temporarly do it by executing the command below each time you start a terminal:
+
+```console
+PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+```
+
+Or you can permanently do it by using this [manual](https://www.architectryan.com/2012/10/02/add-to-the-path-on-mac-os-x-mountain-lion/).
+
+Finally, please, test that you have the required versions installed. Test `wget` (should be version 1.20.3 or later):
+
+```console
+MacBook:~ user$ wget -v
+GNU Wget 1.20.3 for darwin18.7.0.
+
+-cares +digest -gpgme +https +ipv6 +iri +large-file -metalink +nls 
++ntlm +opie -psl +ssl/openssl
+```
+
+Test `grep` (should be version 3.3 or later):
+
+```console
+MacBook:~ user$ grep -V
+grep (GNU grep) 3.3
+Packaged by Homebrew
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Mike Haertel and others; see
+<https://git.sv.gnu.org/cgit/grep.git/tree/AUTHORS>.
+```
+
+## Windows
 If you want to run this script in Windows, then you need to setup a bash shell first, for example, read instructions [here](https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/). I personally didn't try to do that, so it's just a tip.  
 
 # Feedback
