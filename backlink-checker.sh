@@ -416,7 +416,7 @@ do
 			e_success "$line link found"
 		fi
 	fi
-done < "$URLS_FILE"
+done < <($E_GREP "" $URLS_FILE)
 
 if [[ $VERBOSE_LOG > 0 ]]; then
 	echo "All operations complete"
